@@ -10,7 +10,7 @@ function handleSubmit(event) {
     console.log(formURL)
 
     if (Client.testValidURL(formURL) === true) {
-      callAylienAPI('http://localhost:8080/apiData', {"URL":formURL})
+      callAylienAPI('http://localhost:8000/apiData', {"URL":formURL})
         .then(updateUI())
     }else {
       alert('Please enter a valid URL')

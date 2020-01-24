@@ -1,6 +1,6 @@
 const updateUI = async () => {
   console.log('UpdateUI started')
-    const request = await fetch('http://localhost:8080/getData');
+    const request = await fetch('http://localhost:8000/getData');
     console.log(request);
 
     try{

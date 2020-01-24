@@ -13,8 +13,6 @@ const updateUI = async () => {
     }
 };
 
-
-
     //Add Locations
 const updateHTML = (allData) => {
     const HTMLresults = "<h1>Form Results</h1><div id=\"locations\" class=\"entity\"></div><div id=\"organizations\" class=\"entity\"></div><div id=\"people\" class=\"entity\"></div><div id=\"keywords\" class=\"entity\"></div>"

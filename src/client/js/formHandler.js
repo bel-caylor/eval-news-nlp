@@ -20,7 +20,7 @@ function handleSubmit(event) {
 }
 
 const testValidURL = (formURL) => {
-    let pattern = /http(s):/;
+    let pattern = /http?(s):/;
     return pattern.test(formURL);
 };
 

@@ -37,6 +37,7 @@ app.listen(8000, function () {
 })
 
 app.get('/test', function (req, res) {
+    console.log(mockAPIResponse)
     res.send(mockAPIResponse)
 })
 
@@ -64,7 +65,7 @@ const getAylienAPI = async (req, res) => {
 app.post('/apiData', getAylienAPI);
 
 app.get('/getData', function (req, res) {
-    console.log('Data Begin of Get:', aylienData);
+    // console.log('Data Begin of Get:', aylienData);
     setTimeout(function() {res.send(aylienData);}, 3000)
     console.log('Data sent')
     aylienData = [];

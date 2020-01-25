@@ -20,13 +20,24 @@ function handleSubmit(event) {
 }
 
 const testValidURL = (formURL) => {
-    let pattern = /http?(s):/;
+    let pattern = /http|https:/;
     return pattern.test(formURL);
+};
+
+const testServer = async () => {
+  console.log('Test started');
+  const request = await fetch('http://localhost:8000/test');
+  try{
+    const response = await request.json();
+    console.log(response);
+    return response.title
+  }catch(error){
+    console.log("error", error);
+  }
 };
 
 export {
   handleSubmit,
-  testValidURL,
-  // updateUI,
-  // updateHTML
+  testValidURL
+  // testServer
  }
